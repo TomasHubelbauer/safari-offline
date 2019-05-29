@@ -21,4 +21,15 @@ window.addEventListener('load', async () => {
   });
 
   storageTextArea.value = localStorage.getItem('safari-offline');
+
+  const networkP = document.getElementById('networkP');
+  networkP.textContent = navigator.onLine ? 'You are online' : 'You are offline';
+
+  window.addEventListener('online', () => {
+    networkP.textContent = 'You are online as of ' + new Date().toLocaleTimeString();
+  });
+
+  window.addEventListener('offline', () => {
+    networkP.textContent = 'You are online as of ' + new Date().toLocaleTimeString();
+  });
 });
