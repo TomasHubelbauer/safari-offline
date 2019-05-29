@@ -5,6 +5,7 @@ body {
 textarea {
   background: #dfdfdf;
   border: none;
+  font-size: 16px;
   height: 50vh;
   padding: 0;
   width: 100vw;
