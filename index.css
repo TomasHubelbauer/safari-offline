@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+}
+
+textarea {
+  background: #dfdfdf;
+  border: none;
+  height: 50vh;
+  padding: 0;
+  width: 100vw;
+}
+
+#controlsDiv {
+  padding: 1em;
+}
