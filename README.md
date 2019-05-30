@@ -26,3 +26,5 @@ limit the extensions supported in the import flow file `input` tag.
   http://samuli.hakoniemi.net/how-to-implement-safari-push-notifications-on-your-website/
 - [ ] Finalize the export experiments to find a format which offers being saved to
   the Files app
+- [ ] Try to get the generated file to download in Safari using the techniques here
+  https://github.com/eligrey/FileSaver.js/blob/master/src/FileSaver.js
