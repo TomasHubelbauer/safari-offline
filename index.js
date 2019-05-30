@@ -62,4 +62,14 @@ window.addEventListener('load', async () => {
     window.open(downloadA.href);
     //downloadA.click();
   });
+
+  const dataUriWindowOpenButton = document.getElementById('dataUriWindowOpenButton');
+  dataUriWindowOpenButton.addEventListener('click', () => {
+    window.open('data:text/plain,NEW WINDOW');
+  });
+
+  const dataUriLocationHrefButton = document.getElementById('dataUriLocationHrefButton');
+  dataUriLocationHrefButton.addEventListener('click', () => {
+    location.href = 'data:text/plain,SAME WINDOW';
+  });
 });
