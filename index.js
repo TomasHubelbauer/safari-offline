@@ -55,6 +55,9 @@ window.addEventListener('load', async () => {
     const downloadA = document.createElement('a');
     downloadA.download = 'safari-offline.txt';
     downloadA.href = 'data:text/plain,TEST%20EXPORT';
+    downloadA.textContent = 'Export';
+    // Note that for Firefox (and possibly Safari, let's see), the anchor needs to be in the DOM for `click` to work
+    document.body.append(downloadA);
     downloadA.click();
   });
 });
