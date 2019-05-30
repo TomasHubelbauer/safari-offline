@@ -47,7 +47,8 @@ window.addEventListener('load', async () => {
     const downloadA = document.createElement('a');
     downloadA.download = 'safari-offline.sol';
     downloadA.href = 'data:application/octet-stream,TEST%20EXPORT';
-    downloadA.click();
+    window.open(downloadA.href);
+    //downloadA.click();
   });
 
   const exportTxtButton = document.getElementById('exportTxtButton');
@@ -58,6 +59,7 @@ window.addEventListener('load', async () => {
     downloadA.textContent = 'Export';
     // Note that for Firefox (and possibly Safari, let's see), the anchor needs to be in the DOM for `click` to work
     document.body.append(downloadA);
-    downloadA.click();
+    window.open(downloadA.href);
+    //downloadA.click();
   });
 });
