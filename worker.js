@@ -19,3 +19,12 @@ async function intercept(request) {
 
   return response;
 }
+
+void async function communitate() {
+  self.registration.showNotification(new Date().toLocaleString() + ' ' + (await clients.matchAll()).length);
+  for (const client of await clients.matchAll()) {
+    client.postMessage('safari-offline');
+  }
+
+  self.setTimeout(communitate, 5000);
+}()

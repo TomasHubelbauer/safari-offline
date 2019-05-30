@@ -32,4 +32,13 @@ window.addEventListener('load', async () => {
   window.addEventListener('offline', () => {
     networkP.textContent = 'You are online as of ' + new Date().toLocaleTimeString();
   });
+
+  // Note that this also enables notifications shown from the service worker
+  if (Notification.permission === 'default') {
+    await Notification.requestPermission();
+  }
+
+  navigator.serviceWorker.addEventListener('message', event => {
+    //new Notification(evvent.data);
+  })
 });
