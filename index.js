@@ -40,5 +40,21 @@ window.addEventListener('load', async () => {
 
   navigator.serviceWorker.addEventListener('message', event => {
     //new Notification(evvent.data);
-  })
+  });
+
+  const exportSolButton = document.getElementById('exportSolButton');
+  exportSolButton.addEventListener('click', () => {
+    const downloadA = document.createElement('a');
+    downloadA.download = 'safari-offline.sol';
+    downloadA.href = 'data:application/octet-stream,TEST%20EXPORT';
+    downloadA.click();
+  });
+
+  const exportTxtButton = document.getElementById('exportTxtButton');
+  exportTxtButton.addEventListener('click', () => {
+    const downloadA = document.createElement('a');
+    downloadA.download = 'safari-offline.txt';
+    downloadA.href = 'data:text/plain,TEST%20EXPORT';
+    downloadA.click();
+  });
 });

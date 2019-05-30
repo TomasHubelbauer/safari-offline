@@ -21,7 +21,7 @@ async function intercept(request) {
 }
 
 void async function communitate() {
-  self.registration.showNotification(new Date().toLocaleString() + ' ' + (await clients.matchAll()).length);
+  //self.registration.showNotification(new Date().toLocaleString() + ' ' + (await clients.matchAll()).length);
   for (const client of await clients.matchAll()) {
     client.postMessage('safari-offline');
   }
