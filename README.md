@@ -20,11 +20,20 @@ when the file is previewed but restorable when it's loaded back for import.
 I would ideally like to use a ZIP or a custom extension though so that I could
 limit the extensions supported in the import flow file `input` tag.
 
-- [ ] Try to use the `sync` API to have the service worker run continuously in
-  the background or to have it wake up regularly
-- [ ] Try to demonstrate the use of the iOS Safari proprietary notifications
-  http://samuli.hakoniemi.net/how-to-implement-safari-push-notifications-on-your-website/
-- [ ] Finalize the export experiments to find a format which offers being saved to
-  the Files app
-- [ ] Try to get the generated file to download in Safari using the techniques here
-  https://github.com/eligrey/FileSaver.js/blob/master/src/FileSaver.js
+## To-Do
+
+### Try to use the `sync` API to have the service worker run continuously
+
+In the background or to have it wake up regularly
+
+### Try to demonstrate the use of the iOS Safari proprietary notifications
+
+http://samuli.hakoniemi.net/how-to-implement-safari-push-notifications-on-your-website/
+
+### Finalize the export experiments to find a format which offers being saved to the Files app
+
+### Try to get the generated file to download in Safari
+
+Using the techniques here https://github.com/eligrey/FileSaver.js/blob/master/src/FileSaver.js
+
+Now with iOS 13, `download` should also work.
